@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bckqm4aplihwk"]
+
+[ext_resource type="PackedScene" uid="uid://ds7st8ye04k55" path="res://Scenes/hylle_arm.tscn" id="1_3m17l"]
+[ext_resource type="Texture2D" uid="uid://bvyvlk5p85nwm" path="res://Bottle.png" id="1_bmo5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m17l"]
+size = Vector2(714, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmo5g"]
+size = Vector2(65, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ak1r"]
+size = Vector2(36, 56.5)
+
+[node name="Hylle" type="Node2D" unique_id=1407841479]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=607254723]
+offset_right = 1154.0
+offset_bottom = 652.0
+color = Color(0.70121, 0.45296216, 0.31504446, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1674518911]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=836311829]
+position = Vector2(610, 387)
+shape = SubResource("RectangleShape2D_3m17l")
+
+[node name="ColorRect2" type="ColorRect" parent="StaticBody2D" unique_id=1587723739]
+offset_left = 254.0
+offset_top = 367.0
+offset_right = 973.0
+offset_bottom = 407.0
+color = Color(0.66656864, 0.6665687, 0.66656864, 1)
+
+[node name="hylle_arm" parent="StaticBody2D" unique_id=1305519291 instance=ExtResource("1_3m17l")]
+position = Vector2(542, 252)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1987217616]
+position = Vector2(41, -21)
+can_sleep = false
+continuous_cd = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1704910348]
+position = Vector2(345, 288.00003)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_bmo5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=693074293]
+position = Vector2(344.5, 316)
+shape = SubResource("RectangleShape2D_bmo5g")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D" unique_id=2053294590]
+position = Vector2(345, 246.25)
+shape = SubResource("RectangleShape2D_4ak1r")
