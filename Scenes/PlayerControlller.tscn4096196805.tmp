@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://uc0ljsjkxv6e"]
+
+[ext_resource type="Script" uid="uid://choysyndy38sn" path="res://Scenes/player_controlller.gd" id="1_q04lw"]
+[ext_resource type="Script" uid="uid://brew6v115x1dm" path="res://Scripts/button.gd" id="2_mca0e"]
+
+[node name="Control" type="Control" unique_id=406549123]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q04lw")
+
+[node name="ButtonContainer" type="GridContainer" parent="." unique_id=814854876]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 14.0
+offset_right = 67.0
+offset_bottom = 49.0
+columns = 3
+
+[node name="Button1" type="Button" parent="ButtonContainer" unique_id=355181835]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button2" type="Button" parent="ButtonContainer" unique_id=587567384]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button3" type="Button" parent="ButtonContainer" unique_id=1086152775]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button4" type="Button" parent="ButtonContainer" unique_id=578367770]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button5" type="Button" parent="ButtonContainer" unique_id=1833392692]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button6" type="Button" parent="ButtonContainer" unique_id=427373080]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button7" type="Button" parent="ButtonContainer" unique_id=202308371]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button8" type="Button" parent="ButtonContainer" unique_id=437836277]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[node name="Button9" type="Button" parent="ButtonContainer" unique_id=104144660]
+layout_mode = 2
+script = ExtResource("2_mca0e")
+
+[connection signal="pressed" from="ButtonContainer/Button1" to="ButtonContainer/Button1" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button2" to="ButtonContainer/Button2" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button3" to="ButtonContainer/Button3" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button4" to="ButtonContainer/Button4" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button5" to="ButtonContainer/Button5" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button6" to="ButtonContainer/Button6" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button7" to="ButtonContainer/Button7" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button8" to="ButtonContainer/Button8" method="on_pressed"]
+[connection signal="pressed" from="ButtonContainer/Button9" to="ButtonContainer/Button9" method="on_pressed"]
