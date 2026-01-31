@@ -28,8 +28,8 @@ func _physics_process(delta: float) -> void:
 		rightTarget += 0.02
 	if Input.is_action_pressed("button_R"):   
 		rightTarget -= 0.02
-	leftTarget  = clamp(leftTarget,  -hipLimit, hipLimit)
-	rightTarget = clamp(rightTarget, -hipLimit, hipLimit)
+	#leftTarget  = clamp(leftTarget,  -hipLimit, hipLimit)
+	#rightTarget = clamp(rightTarget, -hipLimit, hipLimit)
 	
 	ApplyHipTorque(rightLeg, rightTarget)
 	ApplyHipTorque(leftLeg, leftTarget)
@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 func ApplyHipTorque(leg: RigidBody2D, target: float):
 	var theta = wrapf(leg.rotation - torso.rotation, -PI, PI)
 	var omega = leg.angular_velocity - torso.angular_velocity
-	theta = clamp(theta, -hipLimit, hipLimit)
+	#theta = clamp(theta, -hipLimit, hipLimit)
 	var diff = target - theta
 	
 	if abs(diff) < 0.002:
@@ -52,7 +52,7 @@ func ApplyHipTorque(leg: RigidBody2D, target: float):
 	torque = clamp(torque, -max_torque, max_torque)
 	
 	leg.apply_torque(torque)
-	torso.apply_torque(-torque) #kan brukes for å få realistisk motkraft.
+	#torso.apply_torque(-torque) #kan brukes for å få realistisk motkraft.
 	
 func LimitRotation(leg: RigidBody2D):
 	var theta =  wrapf(leg.rotation - torso.rotation, -PI, PI)

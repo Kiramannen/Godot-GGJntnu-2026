@@ -6,9 +6,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryqnk"]
 size = Vector2(100, 200)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_phu4g"]
-radius = 13.0
-height = 200.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvxwl"]
+size = Vector2(20, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tow2i"]
+size = Vector2(20, 200)
 
 [node name="Player" type="Node2D" unique_id=1546859598 node_paths=PackedStringArray("torso", "leftLeg", "rightLeg")]
 script = ExtResource("1_phu4g")
@@ -20,35 +22,35 @@ rightLeg = NodePath("RightLeg")
 mass = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torso" unique_id=2052692702]
-position = Vector2(1, -300)
+position = Vector2(-1, -320)
 shape = SubResource("RectangleShape2D_ryqnk")
 
+[node name="RightHip" type="PinJoint2D" parent="Torso" unique_id=683417822]
+position = Vector2(37, -200)
+node_a = NodePath("..")
+node_b = NodePath("../../RightLeg")
+angular_limit_lower = -1.5707964
+angular_limit_upper = 1.5707964
+
+[node name="LeftHip" type="PinJoint2D" parent="Torso" unique_id=1901600084]
+position = Vector2(-37, -200)
+node_a = NodePath("..")
+node_b = NodePath("../../LeftLeg")
+angular_limit_lower = -1.5707964
+angular_limit_upper = 1.5707964
+
 [node name="RightLeg" type="RigidBody2D" parent="." unique_id=1186353985]
+collision_layer = 2
 physics_material_override = ExtResource("2_vvxwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightLeg" unique_id=1297362988]
-position = Vector2(37, -100)
-shape = SubResource("CapsuleShape2D_phu4g")
+position = Vector2(36, -100)
+shape = SubResource("RectangleShape2D_vvxwl")
 
 [node name="LeftLeg" type="RigidBody2D" parent="." unique_id=1290218763]
+collision_layer = 2
 physics_material_override = ExtResource("2_vvxwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftLeg" unique_id=1922889070]
 position = Vector2(-37, -100)
-shape = SubResource("CapsuleShape2D_phu4g")
-
-[node name="RightHip" type="PinJoint2D" parent="." unique_id=683417822]
-position = Vector2(37, -200)
-node_a = NodePath("../Torso")
-node_b = NodePath("../RightLeg")
-angular_limit_enabled = true
-angular_limit_lower = -1.5707964
-angular_limit_upper = 1.5707964
-
-[node name="LeftHip" type="PinJoint2D" parent="." unique_id=1901600084]
-position = Vector2(-37, -200)
-node_a = NodePath("../Torso")
-node_b = NodePath("../LeftLeg")
-angular_limit_enabled = true
-angular_limit_lower = -1.5707964
-angular_limit_upper = 1.5707964
+shape = SubResource("RectangleShape2D_tow2i")

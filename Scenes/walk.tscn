@@ -13,7 +13,9 @@ physics_material_override = SubResource("PhysicsMaterial_3xkov")
 polygon = PackedVector2Array(500, 0, 500, 200, 0, 200, 0, 0)
 
 [node name="Node2D" parent="." unique_id=1546859598 instance=ExtResource("1_3xkov")]
-position = Vector2(213, -41)
+position = Vector2(223, -3)
+max_torque = 9000000.0
+rotation_power = 1000000.0
 
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1062785509]
 position = Vector2(-213, 41)
