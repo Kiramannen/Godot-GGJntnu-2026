@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://3aobym5xgxn"]
+
+[ext_resource type="Texture2D" uid="uid://bxw5ynejruf2m" path="res://Assets/karakter.png" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://bjvx7eyafbm7l" path="res://Scenes/Character.gd" id="1_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://eeneqxx271jf" path="res://Assets/Icons/bone head 256 px.png" id="3_rku1e"]
+[ext_resource type="Script" uid="uid://brew6v115x1dm" path="res://Scripts/button.gd" id="4_rfjv2"]
+[ext_resource type="Texture2D" uid="uid://j2lsm0ta52ah" path="res://Assets/Icons/Setting 2 256 px.png" id="5_1phco"]
+[ext_resource type="Texture2D" uid="uid://crfq43e2sg71s" path="res://Assets/Icons/Money  256 px.png" id="6_nb51f"]
+[ext_resource type="Texture2D" uid="uid://d0wh07r1hjd4w" path="res://Assets/Icons/Play 256 px.png" id="7_nnt18"]
+[ext_resource type="Texture2D" uid="uid://b41jnjeo6ltsp" path="res://Assets/Icons/Message 256 px.png" id="8_ewbju"]
+[ext_resource type="Texture2D" uid="uid://d2ybh676r3hyc" path="res://Assets/Icons/Cross 256 px.png" id="9_85qyi"]
+[ext_resource type="Texture2D" uid="uid://d24nsgdyi6fet" path="res://Assets/Icons/Question 256 px.png" id="10_iivbl"]
+[ext_resource type="Texture2D" uid="uid://dk0pjro26urv4" path="res://Assets/Icons/Like 256 px.png" id="11_7nbq1"]
+[ext_resource type="Texture2D" uid="uid://xojnjc84qhh1" path="res://Assets/Icons/Star 256 px.png" id="12_exi56"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2poj3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dryh"]
+size = Vector2(25, 56)
+
+[node name="Game" type="Node2D" unique_id=983653828]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=602479523]
+position = Vector2(0, 649)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1790322241]
+shape = SubResource("WorldBoundaryShape2D_2poj3")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=210897595]
+offset_left = -2252.0
+offset_right = 3431.0
+offset_bottom = 2197.0
+color = Color(0.999996, 0.532687, 0.39929625, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1734732304]
+position = Vector2(-114, 552)
+script = ExtResource("1_wrm1d")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1125736899]
+texture = ExtResource("1_qxrlw")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=826222001]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=435580518]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_3dryh")
+
+[node name="ButtonContainer" type="GridContainer" parent="CharacterBody2D" unique_id=935060025]
+custom_minimum_size = Vector2(32, 32)
+offset_left = -50.0
+offset_top = 138.0
+offset_right = 77.0
+offset_bottom = 266.0
+columns = 3
+
+[node name="Button1" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=421263793]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("3_rku1e")
+script = ExtResource("4_rfjv2")
+action = "Skull"
+
+[node name="Button2" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1543903163]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("5_1phco")
+script = ExtResource("4_rfjv2")
+action = "Cog"
+
+[node name="Button3" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1639621591]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("6_nb51f")
+script = ExtResource("4_rfjv2")
+action = "Money"
+
+[node name="Button4" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1886189572]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("7_nnt18")
+script = ExtResource("4_rfjv2")
+action = "Play"
+
+[node name="Button5" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1660219541]
+layout_mode = 2
+icon = ExtResource("8_ewbju")
+script = ExtResource("4_rfjv2")
+action = "Chat"
+
+[node name="Button6" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1080472176]
+layout_mode = 2
+icon = ExtResource("9_85qyi")
+script = ExtResource("4_rfjv2")
+action = "Cross"
+
+[node name="Button7" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1786306771]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+icon = ExtResource("10_iivbl")
+script = ExtResource("4_rfjv2")
+action = "Question"
+
+[node name="Button8" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=177487824]
+layout_mode = 2
+icon = ExtResource("11_7nbq1")
+script = ExtResource("4_rfjv2")
+action = "Like"
+
+[node name="Button9" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1770198021]
+layout_mode = 2
+icon = ExtResource("12_exi56")
+script = ExtResource("4_rfjv2")
+action = "Star"

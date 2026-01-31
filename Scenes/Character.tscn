@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://fmixig4qe33a"]
+
+[ext_resource type="Texture2D" uid="uid://bxw5ynejruf2m" path="res://Assets/karakter.png" id="1_0y7nr"]
+[ext_resource type="PackedScene" uid="uid://uc0ljsjkxv6e" path="res://Scenes/PlayerControlller.tscn" id="2_jo2ib"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jo2ib"]
+size = Vector2(25, 56)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1359580421]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1699357106]
+texture = ExtResource("1_0y7nr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=396761469]
+position = Vector2(-0.5, 4)
+shape = SubResource("RectangleShape2D_jo2ib")
+
+[node name="Control" parent="." unique_id=406549123 instance=ExtResource("2_jo2ib")]
