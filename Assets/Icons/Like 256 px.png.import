@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvyvlk5p85nwm"
-path="res://.godot/imported/Bottle.png-42246508320c90ef22063aac53c90b17.ctex"
+uid="uid://dk0pjro26urv4"
+path="res://.godot/imported/Like 256 px.png-edca403e6259a099417ccb396e7a66ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bottle.png"
-dest_files=["res://.godot/imported/Bottle.png-42246508320c90ef22063aac53c90b17.ctex"]
+source_file="res://Assets/Icons/Like 256 px.png"
+dest_files=["res://.godot/imported/Like 256 px.png-edca403e6259a099417ccb396e7a66ab.ctex"]
 
 [params]
 
@@ -36,5 +36,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=0
+process/size_limit=32
 detect_3d/compress_to=1
