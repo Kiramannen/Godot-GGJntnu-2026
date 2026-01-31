@@ -1,9 +1,12 @@
 extends Button
 
-signal selected
+signal action_selected(action: String)
 
 @export var action: String
 
+
+func _ready():
+	pressed.connect(on_pressed)
+
 func on_pressed():
-	selected.emit(action)
-	print(action)
+	action_selected.emit(String(action))

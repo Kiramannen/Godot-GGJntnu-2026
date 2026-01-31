@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uc0ljsjkxv6e"]
 
-[ext_resource type="Script" uid="uid://choysyndy38sn" path="res://Scenes/player_controlller.gd" id="1_q04lw"]
+[ext_resource type="Script" uid="uid://choysyndy38sn" path="res://Scripts/player_controlller.gd" id="1_q04lw"]
 [ext_resource type="Texture2D" uid="uid://eeneqxx271jf" path="res://Assets/Icons/bone head 256 px.png" id="2_joswp"]
 [ext_resource type="Script" uid="uid://brew6v115x1dm" path="res://Scripts/button.gd" id="2_mca0e"]
 [ext_resource type="Texture2D" uid="uid://j2lsm0ta52ah" path="res://Assets/Icons/Setting 2 256 px.png" id="4_ixjgn"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dk0pjro26urv4" path="res://Assets/Icons/Like 256 px.png" id="10_yfe1q"]
 [ext_resource type="Texture2D" uid="uid://xojnjc84qhh1" path="res://Assets/Icons/Star 256 px.png" id="11_mesxs"]
 
-[node name="Control" type="Control" unique_id=406549123]
+[node name="PlayerController" type="Control" unique_id=406549123]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -88,13 +88,3 @@ layout_mode = 2
 icon = ExtResource("11_mesxs")
 script = ExtResource("2_mca0e")
 action = "Star"
-
-[connection signal="pressed" from="ButtonContainer/Button1" to="ButtonContainer/Button1" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button2" to="ButtonContainer/Button2" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button3" to="ButtonContainer/Button3" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button4" to="ButtonContainer/Button4" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button5" to="ButtonContainer/Button5" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button6" to="ButtonContainer/Button6" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button7" to="ButtonContainer/Button7" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button8" to="ButtonContainer/Button8" method="on_pressed"]
-[connection signal="pressed" from="ButtonContainer/Button9" to="ButtonContainer/Button9" method="on_pressed"]
