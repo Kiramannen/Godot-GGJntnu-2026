@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://chvt2jsw6kour"]
 
+[ext_resource type="Script" uid="uid://cxq6ggoukx2l3" path="res://Scripts/StoryController.gd" id="1_ki5cn"]
 [ext_resource type="Texture2D" uid="uid://nf5av3xb28x1" path="res://Assets/bakke.png" id="1_w11k0"]
 [ext_resource type="Texture2D" uid="uid://cr8a7373ses43" path="res://Assets/npc.png" id="2_ki5cn"]
 [ext_resource type="Texture2D" uid="uid://b8o13cddnlgaf" path="res://Assets/npcGun.png" id="3_cd3qu"]
@@ -12,11 +13,25 @@
 [ext_resource type="Texture2D" uid="uid://bxw5ynejruf2m" path="res://Assets/karakter.png" id="10_wsuq4"]
 
 [node name="StoryController" type="Node2D" unique_id=1512065487]
+script = ExtResource("1_ki5cn")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1260753725]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Sky" type="ColorRect" parent="." unique_id=636275298]
+show_behind_parent = true
+offset_left = -200.0
+offset_top = -500.0
+offset_right = 800.0
+offset_bottom = 500.0
+mouse_filter = 2
+color = Color(0.011764706, 0.99215686, 1, 1)
+
+[node name="Fade" type="ColorRect" parent="." unique_id=1260753725]
+light_mask = 0
+z_index = 1
+offset_left = -200.0
+offset_top = -501.0
+offset_right = 800.0
+offset_bottom = 499.0
+color = Color(0.015686275, 0.015686275, 0.015686275, 1)
 
 [node name="StoryRoot" type="Node2D" parent="." unique_id=1791320942]
 
@@ -171,7 +186,6 @@ position = Vector2(244, -32)
 texture = ExtResource("9_an7o0")
 
 [node name="Scene9" type="Node2D" parent="StoryRoot" unique_id=55083132]
-visible = false
 
 [node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene9" unique_id=1945186552]
 position = Vector2(128, 32)
@@ -185,3 +199,19 @@ texture = ExtResource("1_w11k0")
 [node name="Karakter" type="Sprite2D" parent="StoryRoot/Scene9" unique_id=490445681]
 position = Vector2(200, -32)
 texture = ExtResource("10_wsuq4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1864610822]
+position = Vector2(1, -170)
+anchor_mode = 0
+zoom = Vector2(3, 3)
+
+[node name="EnterText" type="Container" parent="." unique_id=1423575402]
+offset_left = 101.0
+offset_top = -68.0
+offset_right = 141.0
+offset_bottom = -28.0
+
+[node name="Label" type="Label" parent="EnterText" unique_id=1788636005]
+z_index = 2
+layout_mode = 2
+text = "Press enter to continue"
