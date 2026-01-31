@@ -1,56 +1,19 @@
 [gd_scene format=3 uid="uid://ds7st8ye04k55"]
 
 [ext_resource type="Script" uid="uid://brlv16uwgd0nn" path="res://hylle_arm.gd" id="1_6dg7c"]
+[ext_resource type="PackedScene" uid="uid://b7dhw3m8nph0v" path="res://Scenes/ArmSegment.tscn" id="2_jg85r"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jg85r"]
-size = Vector2(43, 12)
+[sub_resource type="CircleShape2D" id="CircleShape2D_jg85r"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dg7c"]
-size = Vector2(43, 57)
-
-[node name="hylle_arm" type="RigidBody2D" unique_id=13683469]
+[node name="HylleArm" type="Node2D" unique_id=1438393534]
 script = ExtResource("1_6dg7c")
+segmentScene = ExtResource("2_jg85r")
 
-[node name="Finger" type="CollisionShape2D" parent="." unique_id=2000877454]
-position = Vector2(11.5, 4)
-shape = SubResource("RectangleShape2D_jg85r")
+[node name="Segments" type="Node2D" parent="." unique_id=1317064991]
 
-[node name="ColorRect" type="ColorRect" parent="Finger" unique_id=1625828816]
-offset_left = -21.5
-offset_top = -6.0
-offset_right = 21.5
-offset_bottom = 6.0
-color = Color(1, 1, 0.58431375, 1)
+[node name="Anchor" type="StaticBody2D" parent="." unique_id=312065378]
+collision_layer = 0
+collision_mask = 0
 
-[node name="Finger2" type="CollisionShape2D" parent="." unique_id=673214863]
-position = Vector2(12, 26)
-shape = SubResource("RectangleShape2D_jg85r")
-
-[node name="ColorRect" type="ColorRect" parent="Finger2" unique_id=1819620777]
-offset_left = -21.5
-offset_top = -6.0
-offset_right = 21.5
-offset_bottom = 6.0
-color = Color(1, 1, 0.58431375, 1)
-
-[node name="Finger3" type="CollisionShape2D" parent="." unique_id=1254035636]
-position = Vector2(12, 49)
-shape = SubResource("RectangleShape2D_jg85r")
-
-[node name="ColorRect" type="ColorRect" parent="Finger3" unique_id=250705702]
-offset_left = -21.5
-offset_top = -6.0
-offset_right = 21.5
-offset_bottom = 6.0
-color = Color(1, 1, 0.58431375, 1)
-
-[node name="Finger4" type="CollisionShape2D" parent="." unique_id=2046410376]
-position = Vector2(-31, 26.5)
-shape = SubResource("RectangleShape2D_6dg7c")
-
-[node name="ColorRect" type="ColorRect" parent="Finger4" unique_id=125177249]
-offset_left = -21.5
-offset_top = -29.5
-offset_right = 21.5
-offset_bottom = 28.5
-color = Color(1, 1, 0.58431375, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Anchor" unique_id=759445631]
+shape = SubResource("CircleShape2D_jg85r")
