@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://3aobym5xgxn"]
 
+[ext_resource type="Script" uid="uid://cgm4pa7ircnpj" path="res://Scenes/game.gd" id="1_1phco"]
 [ext_resource type="Texture2D" uid="uid://bxw5ynejruf2m" path="res://Assets/karakter.png" id="1_qxrlw"]
 [ext_resource type="Script" uid="uid://bjvx7eyafbm7l" path="res://Scenes/Character.gd" id="1_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://eeneqxx271jf" path="res://Assets/Icons/bone head 256 px.png" id="3_rku1e"]
@@ -12,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d24nsgdyi6fet" path="res://Assets/Icons/Question 256 px.png" id="10_iivbl"]
 [ext_resource type="Texture2D" uid="uid://dk0pjro26urv4" path="res://Assets/Icons/Like 256 px.png" id="11_7nbq1"]
 [ext_resource type="Texture2D" uid="uid://xojnjc84qhh1" path="res://Assets/Icons/Star 256 px.png" id="12_exi56"]
+[ext_resource type="Texture2D" uid="uid://nf5av3xb28x1" path="res://Assets/bakke.png" id="14_1phco"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2poj3"]
 
@@ -19,6 +21,7 @@
 size = Vector2(25, 56)
 
 [node name="Game" type="Node2D" unique_id=983653828]
+script = ExtResource("1_1phco")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=602479523]
 position = Vector2(0, 649)
@@ -26,88 +29,128 @@ position = Vector2(0, 649)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1790322241]
 shape = SubResource("WorldBoundaryShape2D_2poj3")
 
-[node name="ColorRect" type="ColorRect" parent="StaticBody2D" unique_id=210897595]
-offset_left = -2252.0
-offset_right = 3431.0
-offset_bottom = 2197.0
-color = Color(0.999996, 0.532687, 0.39929625, 1)
+[node name="Bakke" type="Node2D" parent="StaticBody2D" unique_id=8951201]
+position = Vector2(0, -649)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1734732304]
-position = Vector2(-114, 552)
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D/Bakke" unique_id=1937708908]
+offset_left = -1597.0
+offset_top = -319.0
+offset_right = 2731.0
+offset_bottom = 1881.0
+color = Color(0, 1, 1, 1)
+
+[node name="Bakke1" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=1499073211]
+position = Vector2(128, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Bakke2" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=1791984894]
+position = Vector2(640, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Bakke3" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=1194894144]
+position = Vector2(384, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Bakke4" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=483668534]
+position = Vector2(-128, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Bakke5" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=2009364573]
+position = Vector2(-384, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Bakke6" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=2131283602]
+position = Vector2(-640, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Bakke8" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=1309945051]
+position = Vector2(-896, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Bakke7" type="Sprite2D" parent="StaticBody2D/Bakke" unique_id=839919506]
+position = Vector2(896, 680)
+texture = ExtResource("14_1phco")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1734732304]
+position = Vector2(212, 615)
 script = ExtResource("1_wrm1d")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1125736899]
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1125736899]
 texture = ExtResource("1_qxrlw")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=826222001]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=826222001]
+position = Vector2(0, -24)
+zoom = Vector2(3, 3)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=435580518]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=435580518]
 position = Vector2(-0.5, 4)
 shape = SubResource("RectangleShape2D_3dryh")
 
-[node name="ButtonContainer" type="GridContainer" parent="CharacterBody2D" unique_id=935060025]
+[node name="ButtonContainer" type="GridContainer" parent="Player" unique_id=935060025]
 custom_minimum_size = Vector2(32, 32)
-offset_left = -50.0
-offset_top = 138.0
-offset_right = 77.0
-offset_bottom = 266.0
+offset_left = -176.0
+offset_top = -124.0
+offset_right = -49.0
+offset_bottom = 4.0
 columns = 3
 
-[node name="Button1" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=421263793]
-custom_minimum_size = Vector2(32, 32)
+[node name="Button1" type="Button" parent="Player/ButtonContainer" unique_id=421263793]
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 icon = ExtResource("3_rku1e")
 script = ExtResource("4_rfjv2")
 action = "Skull"
 
-[node name="Button2" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1543903163]
-custom_minimum_size = Vector2(32, 32)
+[node name="Button2" type="Button" parent="Player/ButtonContainer" unique_id=1543903163]
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 icon = ExtResource("5_1phco")
 script = ExtResource("4_rfjv2")
 action = "Cog"
 
-[node name="Button3" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1639621591]
-custom_minimum_size = Vector2(32, 32)
+[node name="Button3" type="Button" parent="Player/ButtonContainer" unique_id=1639621591]
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 icon = ExtResource("6_nb51f")
 script = ExtResource("4_rfjv2")
 action = "Money"
 
-[node name="Button4" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1886189572]
-custom_minimum_size = Vector2(32, 32)
+[node name="Button4" type="Button" parent="Player/ButtonContainer" unique_id=1886189572]
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 icon = ExtResource("7_nnt18")
 script = ExtResource("4_rfjv2")
 action = "Play"
 
-[node name="Button5" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1660219541]
+[node name="Button5" type="Button" parent="Player/ButtonContainer" unique_id=1660219541]
 layout_mode = 2
 icon = ExtResource("8_ewbju")
 script = ExtResource("4_rfjv2")
 action = "Chat"
 
-[node name="Button6" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1080472176]
+[node name="Button6" type="Button" parent="Player/ButtonContainer" unique_id=1080472176]
 layout_mode = 2
 icon = ExtResource("9_85qyi")
 script = ExtResource("4_rfjv2")
 action = "Cross"
 
-[node name="Button7" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1786306771]
-custom_minimum_size = Vector2(32, 32)
+[node name="Button7" type="Button" parent="Player/ButtonContainer" unique_id=1786306771]
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 icon = ExtResource("10_iivbl")
 script = ExtResource("4_rfjv2")
 action = "Question"
 
-[node name="Button8" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=177487824]
+[node name="Button8" type="Button" parent="Player/ButtonContainer" unique_id=177487824]
 layout_mode = 2
 icon = ExtResource("11_7nbq1")
 script = ExtResource("4_rfjv2")
 action = "Like"
 
-[node name="Button9" type="Button" parent="CharacterBody2D/ButtonContainer" unique_id=1770198021]
+[node name="Button9" type="Button" parent="Player/ButtonContainer" unique_id=1770198021]
 layout_mode = 2
 icon = ExtResource("12_exi56")
 script = ExtResource("4_rfjv2")
 action = "Star"
+
+[node name="Npcs" type="Node2D" parent="." unique_id=592931135]

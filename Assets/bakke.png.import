@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b41jnjeo6ltsp"
-path="res://.godot/imported/Message 256 px.png-297a381d52274dc3313d00e88210f44b.ctex"
+uid="uid://nf5av3xb28x1"
+path="res://.godot/imported/bakke.png-e2f4ba1faf897220d398789e17ae196f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Message 256 px.png"
-dest_files=["res://.godot/imported/Message 256 px.png-297a381d52274dc3313d00e88210f44b.ctex"]
+source_file="res://Assets/bakke.png"
+dest_files=["res://.godot/imported/bakke.png-e2f4ba1faf897220d398789e17ae196f.ctex"]
 
 [params]
 
@@ -36,5 +36,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=16
+process/size_limit=0
 detect_3d/compress_to=1

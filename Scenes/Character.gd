@@ -3,18 +3,20 @@ extends CharacterBody2D
 @export var speed := 200.0
 @export var jump_velocity := -400.0
 @export var gravity := 1000.0
+
+signal slimed 
+
 var moving = false
 var h_dir = 1
 var jumping = false
 func _ready():
 	for button in $ButtonContainer.get_children():
-		print(button, typeof(button))
 		button.action_selected.connect(recieve_action)
 
 func recieve_action(action):
 	match action:
 		"Skull":
-			print("Slimed")
+			slimed.emit()
 		"Play":
 			moving = true
 			h_dir = h_dir*-1
