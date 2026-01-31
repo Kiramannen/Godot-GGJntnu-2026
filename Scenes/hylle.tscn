@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bckqm4aplihwk"]
 
 [ext_resource type="PackedScene" uid="uid://ds7st8ye04k55" path="res://Scenes/hylle_arm.tscn" id="1_3m17l"]
+[ext_resource type="Script" uid="uid://dhl55shfjyvip" path="res://Scenes/static_body_2d.gd" id="1_4ak1r"]
 [ext_resource type="Texture2D" uid="uid://bvyvlk5p85nwm" path="res://Bottle.png" id="1_bmo5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3m17l"]
@@ -28,6 +29,7 @@ offset_bottom = 652.0
 color = Color(0.70121, 0.45296216, 0.31504446, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1674518911]
+script = ExtResource("1_4ak1r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=836311829]
 position = Vector2(610, 387)
@@ -41,10 +43,11 @@ offset_bottom = 407.0
 color = Color(0.66656864, 0.6665687, 0.66656864, 1)
 
 [node name="hylle_arm" parent="StaticBody2D" unique_id=1305519291 instance=ExtResource("1_3m17l")]
-position = Vector2(190, 481)
+position = Vector2(70, 1120)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1987217616]
-position = Vector2(41, -21)
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1987217616 groups=["pickup"]]
+position = Vector2(43, -21)
+collision_mask = 3
 can_sleep = false
 continuous_cd = 2
 

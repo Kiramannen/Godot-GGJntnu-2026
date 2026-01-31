@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://ds7st8ye04k55"]
 
 [ext_resource type="Script" uid="uid://brlv16uwgd0nn" path="res://hylle_arm.gd" id="1_6dg7c"]
+[ext_resource type="PackedScene" uid="uid://b7dhw3m8nph0v" path="res://Scenes/ArmSegment.tscn" id="2_jg85r"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_iyudh"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_jg85r"]
 
 [node name="HylleArm" type="Node2D" unique_id=1438393534]
 script = ExtResource("1_6dg7c")
@@ -11,15 +12,11 @@ script = ExtResource("1_6dg7c")
 
 [node name="Base" type="Node2D" parent="." unique_id=2118701648]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Base" unique_id=521155161]
+shape = SubResource("CircleShape2D_jg85r")
+
+[node name="Claw" parent="." unique_id=568975075 instance=ExtResource("2_jg85r")]
+
 [node name="ArmVisual" type="ColorRect" parent="." unique_id=285584362]
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 44.0
-offset_bottom = 45.0
-
-[node name="Claw" type="CharacterBody2D" parent="." unique_id=1968702806]
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Claw" unique_id=2074393261]
-shape = SubResource("CircleShape2D_iyudh")
+offset_right = 40.0
+offset_bottom = 40.0
