@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://chvt2jsw6kour"]
+
+[ext_resource type="Texture2D" uid="uid://nf5av3xb28x1" path="res://Assets/bakke.png" id="1_w11k0"]
+[ext_resource type="Texture2D" uid="uid://cr8a7373ses43" path="res://Assets/npc.png" id="2_ki5cn"]
+[ext_resource type="Texture2D" uid="uid://b8o13cddnlgaf" path="res://Assets/npcGun.png" id="3_cd3qu"]
+[ext_resource type="Texture2D" uid="uid://ch2bvdtv8s2cs" path="res://Assets/karakterDod.png" id="4_eg2uy"]
+[ext_resource type="Texture2D" uid="uid://dxenya20pn7ir" path="res://Assets/bakkeGress.png" id="5_36ayu"]
+[ext_resource type="Texture2D" uid="uid://b0nn213r0m2eo" path="res://Assets/skipOdelagt.png" id="6_uvep0"]
+[ext_resource type="Texture2D" uid="uid://b2rgk525k4cj5" path="res://Assets/slimeSad.png" id="7_1nibv"]
+[ext_resource type="Texture2D" uid="uid://1oi3m2pgwdgf" path="res://Assets/slimeIde.png" id="8_5a4ke"]
+[ext_resource type="Texture2D" uid="uid://bh7qr6ct8itl" path="res://Assets/KarakterSlimed.png" id="9_an7o0"]
+[ext_resource type="Texture2D" uid="uid://bxw5ynejruf2m" path="res://Assets/karakter.png" id="10_wsuq4"]
+
+[node name="StoryController" type="Node2D" unique_id=1512065487]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1260753725]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StoryRoot" type="Node2D" parent="." unique_id=1791320942]
+
+[node name="Scene1" type="Node2D" parent="StoryRoot" unique_id=70395342]
+visible = false
+
+[node name="Bakke2" type="Sprite2D" parent="StoryRoot/Scene1" unique_id=1478826889]
+position = Vector2(384.5, 32)
+scale = Vector2(1.0039063, 1)
+texture = ExtResource("1_w11k0")
+
+[node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene1" unique_id=1853908874]
+position = Vector2(128, 32)
+texture = ExtResource("1_w11k0")
+
+[node name="Npc" type="Sprite2D" parent="StoryRoot/Scene1" unique_id=1104401589]
+position = Vector2(80, -32)
+texture = ExtResource("2_ki5cn")
+
+[node name="Npc2" type="Sprite2D" parent="StoryRoot/Scene1" unique_id=1369350299]
+position = Vector2(200, -32)
+texture = ExtResource("2_ki5cn")
+
+[node name="Scene2" type="Node2D" parent="StoryRoot" unique_id=389328704]
+visible = false
+
+[node name="Bakke2" type="Sprite2D" parent="StoryRoot/Scene2" unique_id=984542937]
+position = Vector2(384.5, 32)
+scale = Vector2(1.0039063, 1)
+texture = ExtResource("1_w11k0")
+
+[node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene2" unique_id=226164182]
+position = Vector2(128, 32)
+texture = ExtResource("1_w11k0")
+
+[node name="NpcGun" type="Sprite2D" parent="StoryRoot/Scene2" unique_id=1773556038]
+position = Vector2(80, -33)
+texture = ExtResource("3_cd3qu")
+
+[node name="Npc2" type="Sprite2D" parent="StoryRoot/Scene2" unique_id=866334449]
+position = Vector2(200, -32)
+texture = ExtResource("2_ki5cn")
+
+[node name="Scene3" type="Node2D" parent="StoryRoot" unique_id=309294482]
+visible = false
+
+[node name="NpcGun" type="Sprite2D" parent="StoryRoot/Scene3" unique_id=537980126]
+position = Vector2(80, -33)
+texture = ExtResource("3_cd3qu")
+
+[node name="Bakke2" type="Sprite2D" parent="StoryRoot/Scene3" unique_id=1208732846]
+position = Vector2(384.5, 32)
+scale = Vector2(1.0039063, 1)
+texture = ExtResource("1_w11k0")
+
+[node name="KarakterDod" type="Sprite2D" parent="StoryRoot/Scene3" unique_id=594288093]
+position = Vector2(244, -32)
+texture = ExtResource("4_eg2uy")
+
+[node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene3" unique_id=1462313769]
+position = Vector2(128, 32)
+texture = ExtResource("1_w11k0")
+
+[node name="Scene4" type="Node2D" parent="StoryRoot" unique_id=978548237]
+visible = false
+
+[node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene4" unique_id=148318168]
+position = Vector2(128, 32)
+texture = ExtResource("1_w11k0")
+
+[node name="KarakterDod" type="Sprite2D" parent="StoryRoot/Scene4" unique_id=292703226]
+position = Vector2(244, -32)
+texture = ExtResource("4_eg2uy")
+
+[node name="Bakke2" type="Sprite2D" parent="StoryRoot/Scene4" unique_id=1921530553]
+position = Vector2(384.5, 32)
+scale = Vector2(1.0039063, 1)
+texture = ExtResource("1_w11k0")
+
+[node name="Scene5" type="Node2D" parent="StoryRoot" unique_id=1031522871]
+visible = false
+
+[node name="BakkeGress" type="Sprite2D" parent="StoryRoot/Scene5" unique_id=2055775691]
+position = Vector2(128, 24)
+texture = ExtResource("5_36ayu")
+
+[node name="SkipOdelagt" type="Sprite2D" parent="StoryRoot/Scene5" unique_id=1695861778]
+position = Vector2(38, -23)
+texture = ExtResource("6_uvep0")
+
+[node name="SlimeSad" type="Sprite2D" parent="StoryRoot/Scene5" unique_id=1457269347]
+position = Vector2(77, -26)
+texture = ExtResource("7_1nibv")
+
+[node name="BakkeGress2" type="Sprite2D" parent="StoryRoot/Scene5" unique_id=707287319]
+position = Vector2(384, 24)
+texture = ExtResource("5_36ayu")
+
+[node name="Scene6" type="Node2D" parent="StoryRoot" unique_id=967323493]
+visible = false
+
+[node name="BakkeGress" type="Sprite2D" parent="StoryRoot/Scene6" unique_id=827750872]
+position = Vector2(384, 24)
+texture = ExtResource("5_36ayu")
+
+[node name="SkipOdelagt" type="Sprite2D" parent="StoryRoot/Scene6" unique_id=400255842]
+position = Vector2(294, -23)
+texture = ExtResource("6_uvep0")
+
+[node name="SlimeSad" type="Sprite2D" parent="StoryRoot/Scene6" unique_id=1897204658]
+position = Vector2(5, -24)
+texture = ExtResource("7_1nibv")
+
+[node name="BakkeGress2" type="Sprite2D" parent="StoryRoot/Scene6" unique_id=1730714830]
+position = Vector2(128, 24)
+texture = ExtResource("5_36ayu")
+
+[node name="Scene7" type="Node2D" parent="StoryRoot" unique_id=1108844100]
+visible = false
+
+[node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene7" unique_id=2106319877]
+position = Vector2(128, 32)
+texture = ExtResource("1_w11k0")
+
+[node name="KarakterDod" type="Sprite2D" parent="StoryRoot/Scene7" unique_id=896333888]
+position = Vector2(244, -32)
+texture = ExtResource("4_eg2uy")
+
+[node name="Bakke2" type="Sprite2D" parent="StoryRoot/Scene7" unique_id=1530046771]
+position = Vector2(384.5, 32)
+scale = Vector2(1.0039063, 1)
+texture = ExtResource("1_w11k0")
+
+[node name="SlimeIde" type="Sprite2D" parent="StoryRoot/Scene7" unique_id=1082251514]
+position = Vector2(357, -24)
+texture = ExtResource("8_5a4ke")
+
+[node name="Scene8" type="Node2D" parent="StoryRoot" unique_id=393897158]
+visible = false
+
+[node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene8" unique_id=1241376614]
+position = Vector2(128, 32)
+texture = ExtResource("1_w11k0")
+
+[node name="Bakke2" type="Sprite2D" parent="StoryRoot/Scene8" unique_id=235859967]
+position = Vector2(384.5, 32)
+scale = Vector2(1.0039063, 1)
+texture = ExtResource("1_w11k0")
+
+[node name="KarakterSlimed" type="Sprite2D" parent="StoryRoot/Scene8" unique_id=1107507511]
+position = Vector2(244, -32)
+texture = ExtResource("9_an7o0")
+
+[node name="Scene9" type="Node2D" parent="StoryRoot" unique_id=55083132]
+visible = false
+
+[node name="Bakke" type="Sprite2D" parent="StoryRoot/Scene9" unique_id=1945186552]
+position = Vector2(128, 32)
+texture = ExtResource("1_w11k0")
+
+[node name="Bakke2" type="Sprite2D" parent="StoryRoot/Scene9" unique_id=2115007604]
+position = Vector2(384.5, 32)
+scale = Vector2(1.0039063, 1)
+texture = ExtResource("1_w11k0")
+
+[node name="Karakter" type="Sprite2D" parent="StoryRoot/Scene9" unique_id=490445681]
+position = Vector2(200, -32)
+texture = ExtResource("10_wsuq4")
