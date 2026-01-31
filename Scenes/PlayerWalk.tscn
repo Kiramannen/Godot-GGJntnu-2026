@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://djncd5wen4bej"]
 
 [ext_resource type="Script" uid="uid://dcna4abqgei51" path="res://Scripts/PlayerWalk.gd" id="1_phu4g"]
+[ext_resource type="PhysicsMaterial" uid="uid://ddvkeq4qx25oj" path="res://Assets/footMaterial.tres" id="2_vvxwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryqnk"]
 size = Vector2(100, 200)
@@ -16,18 +17,21 @@ leftLeg = NodePath("LeftLeg")
 rightLeg = NodePath("RightLeg")
 
 [node name="Torso" type="RigidBody2D" parent="." unique_id=1097463423]
+mass = 4.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Torso" unique_id=2052692702]
 position = Vector2(1, -300)
 shape = SubResource("RectangleShape2D_ryqnk")
 
 [node name="RightLeg" type="RigidBody2D" parent="." unique_id=1186353985]
+physics_material_override = ExtResource("2_vvxwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightLeg" unique_id=1297362988]
 position = Vector2(37, -100)
 shape = SubResource("CapsuleShape2D_phu4g")
 
 [node name="LeftLeg" type="RigidBody2D" parent="." unique_id=1290218763]
+physics_material_override = ExtResource("2_vvxwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftLeg" unique_id=1922889070]
 position = Vector2(-37, -100)
