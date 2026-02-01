@@ -153,4 +153,13 @@ icon = ExtResource("12_exi56")
 script = ExtResource("4_rfjv2")
 action = "Star"
 
+[node name="CounterContainer" type="Container" parent="Player" unique_id=1902449292]
+offset_left = 105.0
+offset_top = -132.0
+offset_right = 192.0
+offset_bottom = -106.0
+
+[node name="KillCounter" type="Label" parent="Player/CounterContainer" unique_id=1745695475]
+layout_mode = 2
+
 [node name="Npcs" type="Node2D" parent="." unique_id=592931135]

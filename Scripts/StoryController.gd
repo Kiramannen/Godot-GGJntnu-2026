@@ -22,7 +22,7 @@ func ShowScene(index: int):
 func NextScene():
 	enterText.visible = false
 	if index ==len(scenes)-1:
-		get_tree().change_scene_to_file("res://scenes/game.tscn")
+		get_tree().change_scene_to_file("res://Scenes/game.tscn")
 		MusicControllerScript.FadeTo("res://Assets/get-funky-20920.mp3",0.4, 0.4)
 		return
 	await FadeIn()

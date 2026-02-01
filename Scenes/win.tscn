@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://6wjcimri4xfj"]
+
+[ext_resource type="Texture2D" uid="uid://crfq43e2sg71s" path="res://Assets/Icons/Money  256 px.png" id="1_j84t1"]
+
+[node name="Win" type="Node2D" unique_id=482358462]
+position = Vector2(567, 316)
+
+[node name="Container" type="Container" parent="." unique_id=1016406766]
+offset_left = -34.0
+offset_top = -12.0
+offset_right = 582.0
+offset_bottom = 493.0
+
+[node name="Label" type="Label" parent="Container" unique_id=467140987]
+layout_mode = 2
+text = "YOU WIN!!!"
+
+[node name="Money256Px" type="Sprite2D" parent="Container" unique_id=262520313]
+position = Vector2(-302, -116)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px2" type="Sprite2D" parent="Container" unique_id=980644389]
+position = Vector2(-101, -103)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px3" type="Sprite2D" parent="Container" unique_id=1835854277]
+position = Vector2(126, -107)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px4" type="Sprite2D" parent="Container" unique_id=1803029646]
+position = Vector2(328, -96)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px5" type="Sprite2D" parent="Container" unique_id=938854509]
+position = Vector2(-299, -36)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px6" type="Sprite2D" parent="Container" unique_id=1509886806]
+position = Vector2(-98, -23)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px7" type="Sprite2D" parent="Container" unique_id=1527748214]
+position = Vector2(129, -27)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px8" type="Sprite2D" parent="Container" unique_id=1422592617]
+position = Vector2(331, -16)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px9" type="Sprite2D" parent="Container" unique_id=1811610680]
+position = Vector2(-287, 89)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px10" type="Sprite2D" parent="Container" unique_id=1652885865]
+position = Vector2(-86, 102)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px11" type="Sprite2D" parent="Container" unique_id=369352454]
+position = Vector2(141, 98)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px12" type="Sprite2D" parent="Container" unique_id=947075828]
+position = Vector2(343, 109)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px13" type="Sprite2D" parent="Container" unique_id=2063445120]
+position = Vector2(-280, 209)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px14" type="Sprite2D" parent="Container" unique_id=1159938405]
+position = Vector2(-79, 222)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px15" type="Sprite2D" parent="Container" unique_id=343982068]
+position = Vector2(148, 218)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px16" type="Sprite2D" parent="Container" unique_id=1718088294]
+position = Vector2(350, 229)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px17" type="Sprite2D" parent="Container" unique_id=1887184478]
+position = Vector2(-299, -225)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px18" type="Sprite2D" parent="Container" unique_id=2045125687]
+position = Vector2(-98, -212)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px19" type="Sprite2D" parent="Container" unique_id=1388874616]
+position = Vector2(129, -216)
+texture = ExtResource("1_j84t1")
+
+[node name="Money256Px20" type="Sprite2D" parent="Container" unique_id=1358621017]
+position = Vector2(331, -205)
+texture = ExtResource("1_j84t1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1503458472]
+show_behind_parent = true
+offset_left = -888.0
+offset_top = -409.0
+offset_right = 1112.0
+offset_bottom = 591.0
+color = Color(1, 0.019607844, 0.07058824, 1)
