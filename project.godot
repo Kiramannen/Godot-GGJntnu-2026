@@ -15,6 +15,10 @@ run/main_scene="uid://chvt2jsw6kour"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MusicControllerScript="*uid://d3hqc3i7xr7ix"
+
 [input]
 
 push_right={
